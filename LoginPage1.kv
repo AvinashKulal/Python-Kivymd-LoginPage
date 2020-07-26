@@ -1,0 +1,53 @@
+MDScreen:
+    name:'login'
+    MDLabel:
+        text:'STUDENT MANAGEMENT SYSTEM'
+        halign:'center'
+        theme_text_color:'Secondary'
+        pos_hint:{'center_y':.9}
+        font_style:'H6'
+    MDLabel:
+        text:'Log In Page'
+        halign:'center'
+        theme_text_color:'Primary'
+        pos_hint:{'center_y':.8}
+        font_style:'H5'
+        underline:True
+        markup:True
+    MDTextField:
+        hint_text:'EMAIL'
+        pos_hint:{'center_x':.5,'center_y':.62}
+        size_hint:None,None
+        width:300
+        icon_right:'email'
+        icon_right_color:app.theme_cls.accent_color
+
+
+    MDTextField:
+        hint_text:'PASSWORD'
+        pos_hint:{'center_x':.5,'center_y':.5}
+        size_hint:None,None
+        password:True
+        width:300
+        icon_right:'eye-off'
+        icon_right_color:app.theme_cls.accent_color
+
+    MDRaisedButton:
+        text:'Login'
+        pos_hint:{'center_x':.5,'center_y':.37}
+        size_hint:.7,.09
+        md_bg_color:0.8,0.4,0,1
+        text_color:1,1,1,1
+        font_size:'18dp'
+    MDTextButton:
+        text:'Forgot Password..?'
+        pos_hint:{'center_x':.5,'center_y':.25}
+        font_size:'15dp'
+    MDTextButton:
+        text:f'[color=#FFFFFF]Dont have an account ?[/color]Sign Up'
+        markup:True
+        pos_hint:{'center_x':0.5,'center_y':.22}
+        font_size:'15dp'
+
+
+
