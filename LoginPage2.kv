@@ -1,0 +1,88 @@
+MDScreen:
+    BackGround:
+    MDCard:
+        orientation:'vertical'
+        pos_hint:{'center_x':0.5,'center_y':0.5}
+        size_hint:[0.9,0.6]
+        padding:0,0,0,10
+        spacing:15
+        BoxLayout:
+            orientation:'vertical'
+            padding:0
+            spacing:0
+            MDLabel:
+                text:'PLACEMENT PORTAL'
+                halign:'center'
+                font_size:20
+                color:app.theme_cls.primary_color
+                underline:True
+                bold:True
+
+            MDLabel:
+                text:'SIGN IN'
+                halign:'center'
+                valign:'middle'
+                font_size:15
+                color:1,1,1,1
+                bold:True
+
+        MDTextField:
+            hint_text:'PHONE NUMBER'
+            mode:'rectangle'
+            size_hint_x:None
+            icon_right:'phone'
+            icon_right_color:1,1,1,1
+            width:250
+            pos_hint:{'center_x':0.5}
+
+        MDTextField:
+            hint_text:'STUDENT ID'
+            password:True
+            mode:'rectangle'
+            icon_right:'eye-off'
+            icon_right_color:1,1,1,1
+            size_hint_x:None
+            width:250
+            pos_hint:{'center_x':0.5}
+
+
+        MDRaisedButton:
+            text:'SIGN IN'
+            font_size:15
+            pos_hint:{'center_x':0.5,'center_y':.5}
+
+
+
+
+<BackGround@BoxLayout>:
+    orientation:'vertical'
+    MDToolbar:
+        title:'Student Login Page'
+        md_bg_color:app.theme_cls.primary_dark
+        elevation:10
+        right_action_items:[["dots-vertical",lambda x:None],['clock',lambda x:None]]
+
+    BoxLayout:
+        orientation:'vertical'
+        canvas.before:
+            Color:
+                rgba:app.theme_cls.primary_dark
+            RoundedRectangle:
+                size:self.size
+                pos:self.pos
+                radius:[0,0,20,20]
+    BoxLayout:
+        orientation:'vertical'
+        padding:0,0,0,50
+        MDTextButton:
+            text:'Forgot Password ?'
+
+            bold:True
+            font_size:'14dp'
+            pos_hint:{'center_x':0.5}
+        MDTextButton:
+            text:f"[color=#FFFFFF]Don't have an Account?[/color] SIGN UP"
+            markup:True
+            bold:True
+            font_size:'17dp'
+            pos_hint:{'center_x':0.5}
