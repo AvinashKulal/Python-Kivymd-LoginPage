@@ -1,0 +1,63 @@
+<LoginScreen@Screen>:
+    name:'login'
+    canvas:
+        Color:
+            rgba:utils.get_color_from_hex('#EEEEEE')
+        Rectangle:
+            size:self.size
+    Background:
+    BoxLayout:
+        orientation:'horizontal'
+        padding:6,0,6,50
+        spacing:15
+        pos_hint:{'center_x':.7,'center_y':.45}
+        MDFloatingActionButton:
+            icon:'facebook'
+            md_bg_color:0,0,1,.8
+        MDFloatingActionButton:
+            icon:'google'
+            md_bg_color:1,0,0,1
+        MDFloatingActionButton:
+            icon:'git'
+
+
+<Background@BoxLayout>:
+    orientation:'vertical'
+    spacing:3
+    BoxLayout:
+        orientation:'vertical'
+        MDLabel:
+            text:'LOGIN'
+            halign:'center'
+            font_size:'30dp'
+            bold:True
+    MDTextField:
+        icon_right:'email'
+        icon_right_color:1,0,0,.8
+        mode:'rectangle'
+        size_hint_x:None
+        width:300
+        hint_text:'EMAIL'
+        pos_hint:{'center_x':.5}
+    MDTextField:
+        icon_right:'eye-off'
+        icon_right_color:1,0,0,.8
+        size_hint_x:None
+        mode:'rectangle'
+        width:300
+        hint_text:'PASSWORD'
+        password:True
+        pos_hint:{'center_x':.5}
+    MDTextButton:
+        text:f'[color=#0000FF]Forget password ?[/color]'
+        markup:True
+        pos_hint:{'center_x':0.7}
+    MDRoundFlatButton:
+        text:'sign in'
+        text_color:utils.get_color_from_hex('#FFFFFF')
+        md_bg_color:utils.get_color_from_hex('#FF2222')
+        pos_hint:{'center_x':0.5}
+        size_hint:'0.6dp','0dp'
+    MDLabel:
+        text:'or Sign In using'
+        halign:'center'
